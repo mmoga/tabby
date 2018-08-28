@@ -2,7 +2,7 @@
   "name": "Tabby",
   "version": "1.0",
   "description": "Share stuff (tabs)!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
