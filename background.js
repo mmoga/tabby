@@ -18,3 +18,39 @@ chrome.runtime.onInstalled.addListener(function() {
     }]);
   });
 });
+
+var config = {
+  apiKey: FIREBASE_API_KEY,
+  databaseURL: 'https://tabby-3ece8.firebaseio.com',
+  storageBucket: 'tabby-3ece8.appspot.com'
+};
+firebase.initializeApp(config);
+
+/**
+ * initApp handles setting up the Firebase context and registering
+ * callbacks for the auth status.
+ *
+ * The core initialization is in firebase.App - this is the glue class
+ * which stores configuration. We provide an app name here to allow
+ * distinguishing multiple app instances.
+ *
+ * This method also registers a listener with firebase.auth().onAuthStateChanged.
+ * This listener is called when the user is signed in or out, and that
+ * is where we update the UI.
+ *
+ * When signed in, we also authenticate to the Firebase Realtime Database.
+ */
+function initApp() {
+  // Listen for auth state changes.
+  firebase.auth().onAuthStateChanged(function(user) {
+    console.log('User state change detected from the Background script of the Chrome Extension:', user);
+  });
+}
+
+var credential = firebase.auth.GoogleAuthProvider.credential(null, token);
+firebase.auth().signInAndRetrieveDataWithCredential(credential);
+
+window.onload = function() {
+  initApp();
+};
+

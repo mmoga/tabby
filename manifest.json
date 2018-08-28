@@ -1,31 +1,37 @@
 {
-  "name": "Tabby",
-  "version": "1.0",
-  "description": "Share stuff (tabs)!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "options_page": "options.html",
-  "page_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    }
-  },
-  "icons": {
+"name": "Tabby",
+"version": "1.0",
+"description": "Share stuff (tabs)!",
+"permissions": ["activeTab", "declarativeContent", "storage","identity"],
+"background": {
+  "scripts": ["background.js"],
+  "persistent": false
+},
+"options_page": "options.html",
+"page_action": {
+  "default_popup": "popup.html",
+  "default_icon": {
     "16": "images/get_started16.png",
     "32": "images/get_started32.png",
     "48": "images/get_started48.png",
     "128": "images/get_started128.png"
-  },
-  "manifest_version": 2,
-  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
-"permissions": [
-  "identity"
-]
+  }
+},
+"icons": {
+  "16": "images/get_started16.png",
+  "32": "images/get_started32.png",
+  "48": "images/get_started48.png",
+  "128": "images/get_started128.png"
+},
+"manifest_version": 2,
+"content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+
+"oauth2": {
+  "client_id": "712727569136-rvqbuu1pp4s6sc4v7b4ok5502f73oggt.apps.googleusercontent.com",
+  "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+  ]
+},
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi1pI27fF5g2NwOiJdMZs2WDVBT2ABp04kxueUWZ6KiATNH80gqQtR4Y/DtXoWKpX1oGePpNQacBH61nGXH10XInZgW9g/qRnM/UwTAwSwJA1JbPGw55/z7GWg822ieSLlniXCQabc5L4HN0fp8RzFhMyCFhqcjtgyGfkzIZtxqgNXKLL4xrJEDtANXBvgdjILWcXJiVTykyxv2iuMSJY0ceSw3lmzYDsv1Q1hNenuXotfTwL3LN2++9xPfVWbCwRn1ElAlqjcnvuNm7+htEgeBK4xsE/3XaFMCI8Ouk6pebrzQ8nJm6JgK53Fl4YN5yuv3feBs2EN61s3MLcm81CWwIDAQAB"
 }
