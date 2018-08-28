@@ -1,18 +1,4 @@
-// require('dotenv').config()
-// const { FIREBASE_API_KEY, FIREBASE_AUTH_DOMAIN } = process.env;
-
-// // Initialize Firebase
-// var config = {
-// apiKey: FIREBASE_API_KEY,
-// authDomain: FIREBASE_AUTH_DOMAIN,
-// databaseURL: "https://tabby-3ece8.firebaseio.com",
-// projectId: "tabby-3ece8",
-// storageBucket: "tabby-3ece8.appspot.com",
-// messagingSenderId: "142571884018"
-// };
-// firebase.initializeApp(config);
-
-let changeColor = document.getElementById('changeColor');
+slet changeColor = document.getElementById('changeColor');
 
   chrome.storage.sync.get('color', function(data) {
     changeColor.style.backgroundColor = data.color;
