@@ -1,15 +1,29 @@
+
 {
-  "short_name": "Tabby",
-  "name": "Share Tabs With Tabby",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+  "manifest_version": 2,
+  "name": "Tabby",
+  "description": "This extension allows Matthew and Chris to share tabs with each other.",
+  "version": "2.1",
+  "icons": {
+    "128": "firebase.png"
+  },
+  "browser_action": {
+    "default_icon": "firebase.png",
+    "default_popup": "credentials.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "identity"
   ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "712727569136-2ikh43elhko0m1ijqfdlbt8o62ish9f2.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi1pI27fF5g2NwOiJdMZs2WDVBT2ABp04kxueUWZ6KiATNH80gqQtR4Y/DtXoWKpX1oGePpNQacBH61nGXH10XInZgW9g/qRnM/UwTAwSwJA1JbPGw55/z7GWg822ieSLlniXCQabc5L4HN0fp8RzFhMyCFhqcjtgyGfkzIZtxqgNXKLL4xrJEDtANXBvgdjILWcXJiVTykyxv2iuMSJY0ceSw3lmzYDsv1Q1hNenuXotfTwL3LN2++9xPfVWbCwRn1ElAlqjcnvuNm7+htEgeBK4xsE/3XaFMCI8Ouk6pebrzQ8nJm6JgK53Fl4YN5yuv3feBs2EN61s3MLcm81CWwIDAQAB"
 }
