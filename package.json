@@ -1,0 +1,23 @@
+{
+  "name": "tabby",
+  "version": "1.0.0",
+  "description": "Chrome extension for sharing stuff with Chris and Matthew depending on who's reading this",
+  "main": "background.js",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmoga/tabby.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmoga/tabby/issues"
+  },
+  "homepage": "https://github.com/mmoga/tabby#readme"
+}
